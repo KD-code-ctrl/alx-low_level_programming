@@ -1,15 +1,17 @@
 #include <studio.h>
-#include <string.h>
 /**
  * main entry point
- *
- * return(0)
  * 
- * should print string
+ * should print 'Programming is like building a multilingual puzzle'
+ *
+ * Return: Always 0
  * 
  */
-int main()
+
+
+int main(void)
 {
+
 	char string1[] = "Programming is like building a multilingual puzzle";
 
 	puts(string1);
