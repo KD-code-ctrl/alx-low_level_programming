@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- *main - Prints a string followed by a new line.
+ *main - Prints a string about programming followed by a new line.
  *Return : 0 when complete
  */
 
