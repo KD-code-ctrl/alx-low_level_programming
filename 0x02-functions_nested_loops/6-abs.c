@@ -13,6 +13,6 @@ int _abs(int a)
 		_putchar(a);
 	}
 	else
-		putchar(a);
+		_putchar(a);
 	return (0);
 }
