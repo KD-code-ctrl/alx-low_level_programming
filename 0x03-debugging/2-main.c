@@ -16,8 +16,10 @@ int main(void)
 	c = 0;
 
 	largest = largest_number(a, b, c);
-
-	printf("%d is the largest number\n", largest);
+	if (largest == 0)
+		printf("%d", largest);
+	else
+		printf("%d is the largest number\n", largest);
 
 	return (0);
 }
