@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * times_table - prints out the multi table 
+ * times_table - prints out the multi table
  * Return:0 when successful
  */
 void times_table(void)
 {
-	int i, x,result;
+	int i, x, result;
 
 	for (i = 0 ; i <= 9 ; i++)
 	{
@@ -16,14 +16,11 @@ void times_table(void)
 		{
 			_putchar(',');
 			_putchar(' ');
-			
 			result = i * x;
-			
 			if (result <=  9)
 				_putchar(' ');
 			else
-				_putchar((result/10) + '0');
-			
+				_putchar((result / 10) + '0');
 			_putchar((result % 10) + '0');
 		}
 		_putchar('\n');
