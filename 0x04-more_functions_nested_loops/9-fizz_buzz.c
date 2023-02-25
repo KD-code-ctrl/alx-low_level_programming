@@ -11,23 +11,23 @@ int main(void)
 	int n;
 
 	n = 1;
-	while (n < 100)
+	while (n < 100+1)
 	{
 		if (n % 3 == 0 && n % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz  ");
 		}
 		else if (n % 3 == 0)
 		{
-			printf("fizz ");
+			printf("fizz  ");
 		}
 		else if (n % 5 == 0)
 		{
-			printf("Buzz ");
+			printf("Buzz  ");
 		}
 		else
 		{
-			printf("%d ", n);
+			printf("%d  ", n);
 		}
 		n++;
 	}
