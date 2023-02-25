@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_triangel - prints a shape of a triangel
+ * print_triangle - prints a shape of a triangel
  * @size: determines how big the triangel should be
  * Return:0 if successful
  */
 void print_triangle(int size)
 {
-	int i,x,space;
+	int i, x, space;
 
 	if (size > 0)
 	{
