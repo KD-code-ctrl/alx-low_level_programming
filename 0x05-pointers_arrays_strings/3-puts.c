@@ -22,5 +22,4 @@ void _puts(char *str)
 			_putchar(str[count]);
 		}
 	}
-	return (0);
 }
