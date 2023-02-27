@@ -5,7 +5,7 @@
  * @str: is a pointer variable to the string
  * Return:0 when successful
  */
-int _strlen(char *str)
+void _puts(char *str)
 {
 	int max, count;
 
