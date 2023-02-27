@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strlen - prints the length of a string
+ * _puts - prints  a string
  * @str: is a pointer variable to the string
  * Return:0 when successful
  */
@@ -9,8 +9,8 @@ void _puts(char *str)
 {
 	int max, count;
 
-	max = 256;
-	for (count = 0 ; count < max ; count++)
+	max = -1;
+	for (count = 0 ; count > max ; count++)
 	{
 		if (str[count] == '\0')
 		{
