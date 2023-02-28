@@ -14,17 +14,9 @@ void puts2(char *str)
 	{
 		i++;
 	}
-	for (n = 0 ; n <= i ; n += 2)
+	for (n = 0 ; n < i ; n += 2)
 	{
-		if (str[n] == '\0')
-		{
-			_putchar('\n');
-			break;
-		}
-		else
-		{
-			_putchar(str[n]);
-		}
+		_putchar(str[n]);
 	}
 	_putchar('\n');
 }
