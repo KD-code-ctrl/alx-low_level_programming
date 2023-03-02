@@ -45,6 +45,7 @@ int _strcmp(char *s1, char *s2)
 		{
 			diff = s1[i] - s2[i];
 		}
-	return (diff);
+		return (diff);
 	}
+	return (0);
 }
