@@ -37,11 +37,15 @@ int _strcmp(char *s1, char *s2)
 	}
 	for (i = 0; i < longer && s1[i] ; i++)
 	{
-		if (s1[i] != s2[i])
+		if (s1[i] == s2[i])
+		{
+			continue;
+		}
+		else
 		{
 			diff = s1[i] - s2[i];
+			break;
 		}
-		return (diff);
 	}
-	return (0);
+	return (diff);
 }
