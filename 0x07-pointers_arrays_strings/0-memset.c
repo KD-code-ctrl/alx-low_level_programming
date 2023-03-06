@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * memset - function fills the first n bytes of the memory area pointed to by s
+ * _memset - function fills the first n bytes of the memory area pointed to by s
  *  with the constant byte b
  *  @n: is number of blocks to be replaced
  *  @b: is the charcter to be inserted
@@ -14,14 +14,7 @@ char *_memset(char *s, char b, unsigned int n)
 
 	for (i = 0 ; i <= n ; i++)
 	{
-		if (s[i] != ' ')
-		{
-			s[i] = b;
-		}
-		else
-		{
-			continue;
-		}
+		s[i] = b;
 	}
 	return (s);
 }
