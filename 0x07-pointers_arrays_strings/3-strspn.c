@@ -22,10 +22,6 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		total++;
 	}
-	if (accept[0] == '\0')
-	{
-		return (0);
-	}
 	for (i = 0 ; i <= total && accept[i] != '\0' ; i++)
 	{
 		for (x = 0 ;  x <= max && s[x] != '\0' ; x++)
