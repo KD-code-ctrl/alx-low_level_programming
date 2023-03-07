@@ -32,6 +32,10 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
+		if (len  == 0)
+		{
+			break;
+		}
 	}
 	return (len);
 }
