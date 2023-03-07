@@ -22,9 +22,13 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		total++;
 	}
-	for (i = 0 ; i <= total && accept[i] != '\0' ; i++)
+	if (accept[0] == '\0')
 	{
-		for (x = 0 ;  x <= max && s[x] != '\0' ; x++)
+		return (len);
+	}
+	for (i = 0 ; i <= total ; i++)
+	{
+		for (x = 0 ;  x <= max ; x++)
 		{
 			if (accept[i] == s[x])
 			{
@@ -32,7 +36,11 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-		if (len  == 0)
+		if (accept[i] !=  s[x])
+		{
+			break;
+		}
+		else if (len == 0)
 		{
 			break;
 		}
