@@ -26,21 +26,17 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		return (len);
 	}
-	for (i = 0 ; i <= total ; i++)
+	for (i = 0 ; i <= max ; i++)
 	{
-		for (x = 0 ;  x <= max ; x++)
+		for (x = 0 ;  x <= total ; x++)
 		{
-			if (accept[i] == s[x])
+			if (s[i] == accept[x])
 			{
 				len++;
 				break;
 			}
 		}
-		if (accept[i] !=  s[x])
-		{
-			break;
-		}
-		else if (len == 0)
+		if (s[i] !=  accept[x])
 		{
 			break;
 		}
