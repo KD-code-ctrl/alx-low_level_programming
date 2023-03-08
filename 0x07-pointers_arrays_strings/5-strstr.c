@@ -25,11 +25,11 @@ char *_strstr(char *haystack, char *needle)
 	}
 	if (*needle == '\0')
 	{
-		return (h);
+		return (haystack);
 	}
-	for (h = *haystack, i = 0 ; i < max && h[i] != '\0' ; i++)
+	for (h = haystack, i = 0 ; i < max && h[i] != '\0' ; i++)
 	{
-		for (n = *needle, x = 0 ; x < len && n[x] != '\0' ; x++)
+		for (n = needle, x = 0 ; x < len && n[x] != '\0' ; x++)
 		{
 			if (n[x] == h[i])
 			{
