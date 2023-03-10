@@ -11,7 +11,7 @@ int _atoi(char *s)
 
 	max = 0;
 	num = 0;
-	while(s[max] != '\0')
+	while (s[max] != '\0')
 	{
 		max++;
 	}
@@ -23,9 +23,7 @@ int _atoi(char *s)
 		else
 			continue;
 	if (num == 0)
-		return(0);
+		return (0);
 	else
 		return (num);
 }
-
-	
