@@ -1,5 +1,5 @@
 #include "main.h"
-int _prime_helper(int n,int i);
+int _prime_helper(int n, int i);
 /**
  * is_prime_number - is a function that checks if a number is a prime number
  * @n: is number to be checked
@@ -19,13 +19,12 @@ int is_prime_number(int n)
 		return (_prime_helper(n, 3));
 }
 /**
- *
  * _prime_helper - is a helper function to check fif n is divisible
  * @n: is the number to be checked
  * @i: is the devisor
  * Return: 1 if true and 0 if false
  */
-int _prime_helper(int n,int i)
+int _prime_helper(int n, int i)
 {
 	if (i * i > n)
 	{
@@ -36,5 +35,5 @@ int _prime_helper(int n,int i)
 		return (0);
 	}
 	else
-		return (_prime_helper(n, i+2));
+		return (_prime_helper(n, i + 2));
 }
