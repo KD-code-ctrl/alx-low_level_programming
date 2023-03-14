@@ -28,6 +28,10 @@ char *str_concat(char *s1, char *s2)
 		}
 	}
 	arr = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+	if (arr == NULL)
+	{
+		return (NULL);
+	}
 	if (len1 > 0)
 	{
 		for (i = 0 ; i < len1 && s1[i] != '\0' ; i++)
