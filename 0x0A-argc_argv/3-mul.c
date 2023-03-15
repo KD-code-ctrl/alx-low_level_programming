@@ -17,11 +17,14 @@ int main(int argc, char *argv[])
 		printf("Error");
 		return (1);
 	}
-       	result = 1;
-	for (i = 1 ; i < argc ; i++)
+	else
 	{
-		result = result * atoi(argv[i]);
+		result = 1;
+		for (i = 1 ; i < argc ; i++)
+		{
+			result = result * atoi(argv[i]);
+			printf("%d\n", result);
+		}
 	}
-	printf("%d\n", result);
 	return (0);
 }
