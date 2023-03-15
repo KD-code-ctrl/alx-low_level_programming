@@ -14,14 +14,14 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("ERROR");
-		exit(EXIT_SUCCESS);
+		printf("Error");
+		return (1);
 	}
-	result = 1;
+       	result = 1;
 	for (i = 1 ; i < argc ; i++)
 	{
 		result = result * atoi(argv[i]);
 	}
 	printf("%d\n", result);
-	exit(EXIT_SUCCESS);
+	return (0);
 }
