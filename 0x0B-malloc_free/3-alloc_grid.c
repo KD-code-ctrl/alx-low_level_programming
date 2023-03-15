@@ -8,7 +8,7 @@
  * @width: integer variable for the array
  * Return: 2-dimensional array or NULL otherwise
  */
-int **alloc_grid(int height, int width)
+int **alloc_grid(int width, int height)
 {
 	int **arr;
 	int i, x;
@@ -22,19 +22,22 @@ int **alloc_grid(int height, int width)
 	{
 		return (NULL);
 	}
-	for (i = 0 ; i < height ; i++)
+	for (i = 0; i < height; i++)
 	{
-		arr[i] = malloc(sizeof(int *) * width);
+		arr[i] = malloc(sizeof(int) * width);
 		if (arr[i] == NULL)
 		{
-			for (x = 0; x < i ; x++)
+			for (x = i; i >= 0; i--)
 			{
 				free(arr[x]);
 			}
 			free(arr);
 			return (NULL);
 		}
-		for (x = 0 ; x < width ; x++)
+	}
+	for (i = 0; i < height; i++)
+	{
+		for (x = 0; x < width; x++)
 		{
 			arr[i][x] = 0;
 		}
