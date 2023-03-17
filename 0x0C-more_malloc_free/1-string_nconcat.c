@@ -38,11 +38,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (len2 > 0)
 	{
-		for (i = 0; i < n && s2[i] != '\0' ; i++)
+		for (i = 0; i <= n && s2[i] != '\0' ; i++)
 		{
 			arr[len1 + i] = s2[i];
 		}
 	}
-	arr[len1 + len2 + i] = '\0';
+	arr[len1 + len2] = '\0';
 	return (arr);
 }
