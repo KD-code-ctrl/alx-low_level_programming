@@ -43,6 +43,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			arr[len1 + i] = s2[i];
 		}
 	}
-	arr[len1 + len2] = '\0';
+	arr[len1 + len2 + i] = '\0';
 	return (arr);
 }
