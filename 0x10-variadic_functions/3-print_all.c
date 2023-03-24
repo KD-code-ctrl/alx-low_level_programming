@@ -40,7 +40,7 @@ void print_int(va_list arg)
  */
 void print_float(va_list arg)
 {
-	double numbs;
+	float numbs;
 
 	numbs = va_arg(arg, double);
 	printf("%f", numbs);
@@ -59,6 +59,7 @@ void print_string(va_list arg)
 	if (str == NULL)
 	{
 		printf("(nil)");
+		return
 	}
 	printf("%s", str);
 }
@@ -81,7 +82,7 @@ void print_all(const char * const format, ...)
 		{"s", print_string},
 		{NULL, NULL}
 	 };
-	separator = "";
+	separator = ""
 	x = 0;
 	i = 0;
 	va_start(arg, format);
@@ -94,7 +95,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", separator);
 				put[x].func(arg);
-				separator = ",";
+				separator = ", ";
 				break;
 			}
 			x++;
@@ -104,4 +105,3 @@ void print_all(const char * const format, ...)
 	va_end(arg);
 	printf("\n");
 }
-
