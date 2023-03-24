@@ -94,7 +94,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", separator);
 				put[x].func(arg);
-				separator = ", ";
+				separator = ",";
 				break;
 			}
 			x++;
