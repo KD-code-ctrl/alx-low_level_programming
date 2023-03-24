@@ -85,14 +85,8 @@ void print_all(const char * const format, ...)
 	separator = "";
 	x = 0;
 	i = 0;
-	if (format == NULL)
-	{
-		printf("\n");
-		return;
-	}
-
 	va_start(arg, format);
-	while (format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		x = 0;
 		while (put[x].type != NULL)
