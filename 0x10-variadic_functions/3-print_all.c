@@ -59,7 +59,7 @@ void print_string(va_list arg)
 	if (str == NULL)
 	{
 		printf("(nil)");
-		return
+		return;
 	}
 	printf("%s", str);
 }
@@ -82,7 +82,7 @@ void print_all(const char * const format, ...)
 		{"s", print_string},
 		{NULL, NULL}
 	 };
-	separator = ""
+	separator = "";
 	x = 0;
 	i = 0;
 	va_start(arg, format);
