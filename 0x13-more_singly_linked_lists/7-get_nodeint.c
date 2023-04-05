@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * get_nodeint_at_indexget_nodeint_at_index - returns the nth node
+ * get_nodeint_at_index - returns the nth node
  * @head: is a pointer to struct
  * @index: is  the nth position of the node
  * Return: the nth node
