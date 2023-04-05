@@ -12,6 +12,7 @@ int pop_listint(listint_t **head)
 	listint_t *temp;
 	int i;
 
+	i = 0;
 	if (head == NULL)
 	{
 		return (0);
