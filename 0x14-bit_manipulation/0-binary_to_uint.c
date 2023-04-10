@@ -15,6 +15,10 @@ unsigned int binary_to_uint(const char *b)
 	len = strlen(b);
 	i = 0;
 	sum = 0;
+	if (b == NULL)
+	{
+		return (0);
+	}
 	while (i < len)
 	{
 		if (b[i] >= 'a' && b[i] <= 'z')
