@@ -12,9 +12,10 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int i, len, sum;
 
-	len = _strlen(b);
+	len = 0;
 	i = 0;
 	sum = 0;
+	len = _strlen(b);
 	if (*b == '\0')
 	{
 		return (0);
@@ -40,16 +41,21 @@ unsigned int binary_to_uint(const char *b)
  * @exponent: is the exponent
  * Return: the result of base to the power of exponent
  */
-double _pow(double base, unsigned int exponent)
+int _pow(int base, int exponent)
 {
-	unsigned int i;
-	double result = 1;
+	int result = 1;
+	int i;
 
-	for (i = 0; i < exponent; i++) 
+	if (exponent < 0)
+	{
+		base = 1 / base;
+		exponent = -exponent;
+	}
+	for (i = 0; i < exponent; i++)
 	{
 		result *= base;
 	}
-	return result;
+	return (result);
 }
 
 /**
