@@ -12,7 +12,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int i, len, sum;
 
-	len = strlen(b);
+	len = _strlen(b);
 	i = 0;
 	sum = 0;
 	if (*b == '\0')
@@ -55,4 +55,20 @@ int _pow(int base, int exponent)
 		result *= base;
 	}
 	return (result);
+}
+
+/**
+ * _strlen -  is a function that returns a strings length
+ * *s: is a pointer to string
+ * Return: length of the string
+ */
+int _strlen(const char *s)
+{
+	int len = 0;
+
+	while(s[len])
+	{
+		len++;
+	}
+	return (len);
 }
