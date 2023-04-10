@@ -21,11 +21,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 	while (i < len)
 	{
-		if (b[i] >= 'a' && b[i] <= 'z')
-		{
-			return (0);
-		}
-		else if (b[i] >= 'A' && b[i] <= 'Z')
+		if (b[i] != '0' && b[i] != '1')
 		{
 			return (0);
 		}
