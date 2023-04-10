@@ -40,33 +40,28 @@ unsigned int binary_to_uint(const char *b)
  * @exponent: is the exponent
  * Return: the result of base to the power of exponent
  */
-int _pow(int base, int exponent)
+double _pow(double base, unsigned int exponent)
 {
-	int result = 1;
-	int i;
+	unsigned int i;
+	double result = 1;
 
-	if (exponent < 0)
-	{
-		base = 1 / base;
-		exponent = -exponent;
-	}
-	for (i = 0; i < exponent; i++)
+	for (i = 0; i < exponent; i++) 
 	{
 		result *= base;
 	}
-	return (result);
+	return result;
 }
 
 /**
  * _strlen -  is a function that returns a strings length
- * *s: is a pointer to string
+ * @s: is a pointer to string
  * Return: length of the string
  */
 int _strlen(const char *s)
 {
 	int len = 0;
 
-	while(s[len])
+	while (s[len])
 	{
 		len++;
 	}
