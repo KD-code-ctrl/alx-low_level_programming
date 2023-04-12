@@ -9,14 +9,29 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int i, mask;
-	mask = (unsigned long int)1 << (sizeof(n) * 8 - 1);
+	unsigned long int base;
 
-	for (i = 0; i < (sizeof(n) * 8); i++)
+	if (n == 0)
 	{
-		_putchar((n & mask) ? '1' : '0');
-		mask >>= 1;
+		printf("0");
+		return;
 	}
-	_putchar('\n');
+	base = 1;
+	while (base <= n)
+	{
+		base <<= 1;
+	}
+	base >>= 1;
+	while (base > 0)
+	{
+		if (n & base)
+		{
+			printf("1");
+		}
+		else
+		{
+			printf("0");
+		}
+		base >>= 1;
+	}
 }
-
