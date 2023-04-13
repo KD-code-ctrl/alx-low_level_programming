@@ -16,21 +16,27 @@ unsigned int binary_to_uint(const char *b)
 	i = 0;
 	sum = 0;
 	len = _strlen(b);
+	if (len == 0)
+	{
+		return (0);
+	}
 	if (*b == '\0')
 	{
 		return (0);
 	}
-	while (i < len)
+	for (i = 0; i < len ; i++)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (b[i] == '0' || b[i] == '1')
+		{
+			if (b[i] == '1')
+			{
+				sum += (b[i] - '0') * _pow(2, len - i - 1);
+			}
+		}
+		else
 		{
 			return (0);
 		}
-		i++;
-	}
-	for (i = 0; i < len ; i++)
-	{
-		sum += (b[len - i - 1] - '0') * _pow(2, i);
 	}
 	return (sum);
 }
@@ -67,7 +73,7 @@ int _strlen(const char *s)
 {
 	int len = 0;
 
-	while (s[len])
+	while (s[len] != '\0')
 	{
 		len++;
 	}
