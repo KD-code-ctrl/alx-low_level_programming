@@ -12,22 +12,30 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int i, len, sum;
 
+	if (b == NULL)
+	{
+		return 0;
+	}
 	len = _strlen(b);
 	if (len == 0)
 	{
 		return (0);
 	}
-	sum  = 0;
 	for (i = 0; i < len ; i++)
 	{
-		if (b[i] == '0' || b[i] == '1')
-		{
-			sum = (sum << 1) + (b[i] - '0');
-		}
-		else
+		if (b[i] != '0' && b[i] != '1')
 		{
 			return (0);
 		}
+	}
+	if (len > sizeof(unsigned int) * 8)
+	{
+		return (0);
+	}
+	sum = 0;
+	for (i = 0; i < len; i++)
+	{
+		sum = (sum << 1) + (b[i] - '0');
 	}
 	return (sum);
 }
