@@ -9,8 +9,6 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int base;
-
 	if (n == 0)
 	{
 		printf("0");
@@ -20,22 +18,9 @@ void print_binary(unsigned long int n)
 	{
 		return;
 	}
-	base = 1;
-	while (base <= n)
+	if (n > 1)
 	{
-		base <<= 1;
+		print_binary(n >> 1);
 	}
-	base >>= 1;
-	while (base > 0)
-	{
-		if (n & base)
-		{
-			printf("1");
-		}
-		else
-		{
-			printf("0");
-		}
-		base >>= 1;
-	}
+	_putchar((n & 1) ? '1' : '0');
 }
