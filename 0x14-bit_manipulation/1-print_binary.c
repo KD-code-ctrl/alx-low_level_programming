@@ -22,7 +22,7 @@ void print_binary(unsigned long int n)
 		base <<= 1;
 	}
 	base >>= 1;
-	while (base > 0)
+	while (base >= 1)
 	{
 		if (n & base)
 		{
