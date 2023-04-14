@@ -16,13 +16,17 @@ void print_binary(unsigned long int n)
 		printf("0");
 		return;
 	}
+	if ((signed long int)n < 0)
+	{
+		return;
+	}
 	base = 1;
 	while (base <= n)
 	{
 		base <<= 1;
 	}
 	base >>= 1;
-	while (base >= 1)
+	while (base > 0)
 	{
 		if (n & base)
 		{
