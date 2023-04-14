@@ -24,15 +24,14 @@ unsigned int binary_to_uint(const char *b)
 	sum = 0;
 	for (i = 0; i < len ; i++)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (b[i] == '0' || b[i] == '1')
+		{
+			sum = (sum << 1) + (b[i] - '0');
+		}
+		else
 		{
 			return (0);
 		}
-		sum = (sum << 1) + (b[i] - '0');
-	}
-	if (len > sizeof(unsigned int) * 8)
-	{
-		return (0);
 	}
 	return (sum);
 }
