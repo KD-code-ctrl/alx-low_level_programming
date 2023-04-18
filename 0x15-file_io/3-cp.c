@@ -16,19 +16,14 @@ int cp_file(const char *filename_1, const char *filename_2)
 	int fp_1, fp_2, _read, _write;
 	char buffer[1024];
 
-	if (filename_1 == NULL)
-	{
-		dprintf(STDERR_FILENO, "Error:Can't read from file %s\n", filename_1);
-		exit(98);
-	}
 	fp_1 = open(filename_1, O_RDONLY);
-	if (fp_1 < 0)
+	if (!filename_1 || fp_1 < 0)
 	{
 		dprintf(STDERR_FILENO, "Error:Can't read from file %s\n", filename_1);
 		exit(98);
 	}
 	fp_2 = open(filename_2, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (fp_2 < 0)
+	if (!filename_2 || fp_2 < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename_2);
 		exit(99);
@@ -59,10 +54,6 @@ int cp_file(const char *filename_1, const char *filename_2)
 	}
 	return (0);
 }
-
-
-
-
 /**
  * main - checks the code
  * @argc: is the number of arguments
