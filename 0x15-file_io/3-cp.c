@@ -54,3 +54,24 @@ int cp_file(const char *filename_1, const char *filename_2)
 	}
 	return (0);
 }
+
+
+
+
+/**
+ * main - checks the code
+ * @argc: is the number of arguments
+ * @argv: is the the value or the argument it'self
+ *
+ * Return: always 0
+ */
+int main(int argc, char **argv)
+{
+	if (argc != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	cp_file(argv[1], argv[2]);
+	exit(0);
+}
