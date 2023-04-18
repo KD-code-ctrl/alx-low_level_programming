@@ -19,10 +19,10 @@ int cp_file(const char *filename_1, const char *filename_2)
 	fp_1 = open(filename_1, O_RDONLY);
 	if (!filename_1 || fp_1 < 0)
 	{
-		dprintf(STDERR_FILENO, "Error:Can't read from file %s\n", filename_1);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename_1);
 		exit(98);
 	}
-	fp_2 = open(filename_2, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fp_2 = open(filename_2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (!filename_2 || fp_2 < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename_2);
@@ -39,7 +39,7 @@ int cp_file(const char *filename_1, const char *filename_2)
 	}
 	if (_read < 0)
 	{
-		dprintf(STDERR_FILENO, "Error:Can't read from file %s\n", filename_1);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename_1);
 		exit(98);
 	}
 	if (close(fp_1) < 0)
