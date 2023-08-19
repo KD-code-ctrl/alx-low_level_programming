@@ -16,15 +16,27 @@ unsigned int binary_to_uint(const char *string)
 	int power = 1;
 	int sum = 0;
 
+	if (string  == NULL)
+	{
+		return (0);
+	}
 	if (str_len == 0)
 	{
 		return (0);
 	}
-	for (i = str_len - 1; i >= 0; i--)
+	for (i = (str_len - 1); i >= 0; i--)
 	{
 		if (string[i] == '1')
 		{
 			sum += power;
+		}
+		else if (string[i] == '0')
+		{
+			sum += 0;
+		}
+		else
+		{
+			return (0);
 		}
 		power = 2 * power;
 	}
