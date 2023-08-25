@@ -35,3 +35,19 @@ unsigned int binary_to_uint(const char *b)
 	}
 	return (sum);
 }
+/**
+ * _strlen - prints the length of a string
+ * @s: is a pointer variable to the string
+ * Return:0 when successful
+ */
+
+int _strlen(const char *s)
+{
+	int len = 0;
+
+	while (s[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
+}
