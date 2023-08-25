@@ -5,40 +5,33 @@
 
 /**
  *  binary_to_uint - is a function that converts binary to integer
- *  @string: is a pointer to string that  has binary
+ *  @b: is a pointer to string that  has binary
  *  Return: the converted number
  */
-
-unsigned int binary_to_uint(const char *string)
+unsigned int binary_to_uint(const char *b)
 {
-	int i = 0;
-	int str_len = strlen(string);
-	int power = 1;
-	int sum = 0;
+	unsigned int i, len, sum;
 
-	if (string  == NULL)
+	if (b == NULL)
 	{
 		return (0);
 	}
-	if (str_len == 0)
+	len = _strlen(b);
+	if (len == 0)
 	{
 		return (0);
 	}
-	for (i = (str_len - 1); i >= 0; i--)
+	sum = 0;
+	for (i = 0; i < len ; i++)
 	{
-		if (string[i] == '1')
+		if (b[i] == '0' || b[i] == '1')
 		{
-			sum += power;
-		}
-		else if (string[i] == '0')
-		{
-			sum += 0;
+			sum = (sum << 1) + (b[i] - '0');
 		}
 		else
 		{
 			return (0);
 		}
-		power = 2 * power;
 	}
 	return (sum);
 }
